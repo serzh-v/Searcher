@@ -25,6 +25,11 @@ public class Searcher {
         return null;
     }
     
+    /**
+     * Метод производящий
+     * @param country
+     * @return 
+     */
     public Person adressCountrySearch(String country){
         for (Person p: persons){
             if (country.equals(p.adress.country)){
