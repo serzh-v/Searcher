@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.searcher;
 
 /**
- *
- * @author Dell
+ * класс задающий представление о том, как выглядит адрес человека
  */
 public class Address {
     public String country;

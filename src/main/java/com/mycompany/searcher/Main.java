@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.searcher;
 
 /**
- *
- * @author Dell
+ *класс, в котором задается массив из людей и пишутся запросы
  */
 public class Main {
     static final int PERSONS_TOTAL = 4;

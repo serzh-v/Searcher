@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.searcher;
 
 /**
- *
- * @author Dell
+ * класс в которм описаны методы по созданию запросов
  */
 public class Searcher {
     public Person[] persons;
@@ -16,6 +10,9 @@ public class Searcher {
         this.persons = persons;
     }
     
+    /**
+     * метод, реализующий поиск людей по фамилии 
+     */
     public Person surnameSearch(String surname){
         for (Person p: persons){
             if (surname.equals(p.surname)){
@@ -26,9 +23,7 @@ public class Searcher {
     }
     
     /**
-     * Метод производящий
-     * @param country
-     * @return 
+     * Метод производящий поиск по стране проживания
      */
     public Person adressCountrySearch(String country){
         for (Person p: persons){
@@ -39,7 +34,10 @@ public class Searcher {
         return null;
     }
     
-    public Person adressCitySearch(String country, String city, String street){
+    /**
+     * метод производящий поиск по улице проживания
+     */
+    public Person adressStreetSearch(String country, String city, String street){
         for (Person p: persons){
             if (
                     country.equals(p.adress.country) &&
@@ -52,7 +50,10 @@ public class Searcher {
         return null;
     }
     
-    public Person adressStreetSearch(String country, String city){
+    /**
+     * метод производящий поиск по городу проживания
+     */
+    public Person adressCitySearch(String country, String city){
         for (Person p: persons){
             if (
                     country.equals(p.adress.country) &&
@@ -63,7 +64,10 @@ public class Searcher {
         } 
         return null;
     }
-
+    
+    /**
+     * метод, выводящий всех людей, живущих на одной улице
+     */
     public Person[] sameStreetSearch(String country, String city, String street){
         Person [] pf = new Person[persons.length];
         int pfi = 0;
@@ -86,6 +90,9 @@ public class Searcher {
         return pfResult;
     }
     
+    /**
+     * метод определяющий самого молодого человека из списка
+     */
     public Person yougestSearch(){
         Person result = persons[0];
         for (int i = 1; i < persons.length; i++) {
@@ -95,7 +102,9 @@ public class Searcher {
         }
         return result;
     }
-    
+    /**
+     * медот, определяющий самого старшего человека из списка
+     */
     public Person oldestSearch(){
         Person result = persons[0];
         for (int i = 1; i < persons.length; i++) {
@@ -106,6 +115,9 @@ public class Searcher {
         return result;
     }
     
+    /**
+     * метод выводящий всех людей, рожденных между двумя годами
+     */
     public Person [] inBetweenSearch(int fromYear, int toYear){
         Person [] pf = new Person[persons.length];
         int pfi = 0;
